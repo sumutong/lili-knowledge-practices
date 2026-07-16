@@ -14,5 +14,14 @@
 | Python | [api-test-framework](python/api-test-framework/) | API 自动化测试框架 (pytest + requests) |
 | Python | [backtrader-strategy](python/backtrader-strategy/) | 双均线策略回测系统 (Backtrader) |
 | Go | [renamer](go/renamer/) | 文件批量重命名CLI工具 |
+| Go | [restful-api](go/restful-api/) | 纯标准库 RESTful CRUD API + 中间件 |
+| Go | [websocket-chat](go/websocket-chat/) | WebSocket 多房间实时聊天室 |
+| Go | [cron-scheduler](go/cron-scheduler/) | 企业级定时任务调度器 (Cron) |
+| Go | [docker-deploy](go/docker-deploy/) | 多阶段 Docker 构建 + 容器化部署 |
+| Go | [object-storage](go/object-storage/) | MinIO/S3 兼容对象存储客户端 |
+| Go | [micro-gateway](go/micro-gateway/) | 微服务 API 网关 (反向代理+负载均衡) |
+| Go | [file-sync](go/file-sync/) | rsync 风格文件增量同步工具 |
+| Go | [config-center](go/config-center/) | 配置中心 (热加载+多格式+订阅) |
+| Go | [distributed-tracing](go/distributed-tracing/) | OpenTelemetry 分布式链路追踪 |
 
 📚 完整课程: https://knowledge.sumutong.com

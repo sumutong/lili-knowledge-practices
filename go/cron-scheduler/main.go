@@ -44,6 +44,7 @@ func (m *JobManager) AddJob(name, cronExpr string, fn func()) (*ScheduledJob, er
 	m.mu.Lock()
 	defer m.mu.Unlock()
 
+	var entryID cron.EntryID
 	entryID, err := m.cron.AddFunc(cronExpr, func() {
 		now := time.Now()
 		m.mu.Lock()
@@ -94,8 +95,8 @@ func (m *JobManager) Start() {
 	log.Println("🕐 定时任务调度器已启动")
 }
 
-func (m *JobManager) Stop() context.Context {
-	return m.cron.Stop()
+func (m *JobManager) Stop() {
+	m.cron.Stop()
 }
 
 // ─── HTTP API ─────────────────────────────────────────────
