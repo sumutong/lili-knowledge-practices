@@ -105,10 +105,10 @@ async fn proxy(
         Ok(resp) => {
             let status = resp.status();
             info!("✅ {} {} → {}", method, uri, status);
-            Ok(resp.map(|b| {
-                let bytes = b.collect().map(|c| c.to_bytes()).unwrap_or_default();
-                Full::new(bytes)
-            }))
+            let (parts, body) = resp.into_parts();
+            let collected = body.collect().await?;
+            let bytes = collected.to_bytes();
+            Ok(Response::from_parts(parts, Full::new(bytes)))
         }
         Err(e) => {
             error!("转发请求失败: {}", e);

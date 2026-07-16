@@ -4,18 +4,20 @@
 use std::fs;
 use std::thread;
 use std::time::Duration;
-use tracing::{info, warn, error, debug, Level, span};
+use tracing::{info, error, Level, span};
 use tracing_subscriber::{fmt, layer::SubscriberExt, util::SubscriberInitExt, EnvFilter};
 
 mod services {
-    use tracing::{info, error, instrument};
+    use std::thread;
+    use std::time::Duration;
+    use tracing::{info, error, instrument, warn};
 
     #[instrument]
     pub fn process_order(order_id: u64, amount: f64) -> Result<String, String> {
         info!(order_id, amount, "开始处理订单");
 
         // 模拟业务逻辑
-        let result = validate_order(order_id, amount)?;
+        let _result = validate_order(order_id, amount)?;
         info!(order_id, status = "validated", "订单验证通过");
 
         let payment_id = process_payment(order_id, amount)?;

@@ -91,20 +91,14 @@ fn watch_config(path: String, shared_config: SharedConfig) -> notify::Result<()>
                         // 短暂延迟避免读取不完整
                         thread::sleep(Duration::from_millis(100));
 
-                        match load_config(&path) {
-                            Ok(new_config) => {
-                                let mut cfg = shared_config.write().unwrap();
-                                println!("  🏠 服务地址: {}:{}", new_config.server.host, new_config.server.port);
-                                println!("  👷 工作线程: {}", new_config.server.workers);
-                                println!("  📊 最大连接: {}", new_config.limits.max_connections);
-                                println!("  ⚡ 速率限制: {}", new_config.limits.rate_limit);
-                                *cfg = new_config;
-                                println!("✅ 配置已热加载");
-                            }
-                            Err(e) => {
-                                eprintln!("❌ 配置解析失败: {}", e);
-                            }
-                        }
+                        let new_config = load_config(&path);
+                        let mut cfg = shared_config.write().unwrap();
+                        println!("  🏠 服务地址: {}:{}", new_config.server.host, new_config.server.port);
+                        println!("  👷 工作线程: {}", new_config.server.workers);
+                        println!("  📊 最大连接: {}", new_config.limits.max_connections);
+                        println!("  ⚡ 速率限制: {}", new_config.limits.rate_limit);
+                        *cfg = new_config;
+                        println!("✅ 配置已热加载");
                     }
                 }
             }
