@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  read_timeout: 10s
+  write_timeout: 10s
+
+database:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: secret
+  dbname: myapp
+  max_conns: 100
+
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+
+features:
+  enable_cache: true
+  enable_rate_limit: true
+  enable_metrics: false

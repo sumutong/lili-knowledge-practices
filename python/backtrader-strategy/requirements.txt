@@ -1,0 +1,4 @@
+backtrader>=1.9
+matplotlib>=3.8
+pandas>=2.2
+yfinance>=0.2

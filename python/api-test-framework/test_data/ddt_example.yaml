@@ -1,0 +1,20 @@
+# 数据驱动测试示例
+- id: "valid_user_1"
+  endpoint: "/users/1"
+  expected_status: 200
+  checks:
+    - field: id
+      type: integer
+    - field: name
+      type: string
+
+- id: "valid_user_2"
+  endpoint: "/users/2"
+  expected_status: 200
+  checks:
+    - field: email
+      type: string
+
+- id: "not_found"
+  endpoint: "/users/9999"
+  expected_status: 404
