@@ -1,27 +1,168 @@
 # 立里知识库 · 实战项目源码
 
-每个项目 `git clone` 后可直接运行。按技术栈分类。
+每个项目 `git clone` 后可直接运行。
 
-| 技术栈 | 项目 | 说明 |
-|--------|------|------|
-| Python | [news-crawler](python/news-crawler/) | 多线程新闻爬虫+情感分析 |
-| Python | [flask-rest-api](python/flask-rest-api/) | Flask + SQLAlchemy + JWT 全栈 RESTful API |
-| Python | [async-spider](python/async-spider/) | 高性能异步爬虫框架 (asyncio + aiohttp) |
-| Python | [order-microservice](python/order-microservice/) | FastAPI 订单微服务 + Redis 缓存 |
-| Python | [sales-analytics](python/sales-analytics/) | 销售数据分析报表系统 (pandas + matplotlib) |
-| Python | [etl-pipeline](python/etl-pipeline/) | ETL 数据清洗管道 (pandas + SQLAlchemy) |
-| Python | [markdown-editor](python/markdown-editor/) | Markdown 实时预览编辑器 (PyQt6) |
-| Python | [api-test-framework](python/api-test-framework/) | API 自动化测试框架 (pytest + requests) |
-| Python | [backtrader-strategy](python/backtrader-strategy/) | 双均线策略回测系统 (Backtrader) |
-| Go | [renamer](go/renamer/) | 文件批量重命名CLI工具 |
-| Go | [restful-api](go/restful-api/) | 纯标准库 RESTful CRUD API + 中间件 |
-| Go | [websocket-chat](go/websocket-chat/) | WebSocket 多房间实时聊天室 |
-| Go | [cron-scheduler](go/cron-scheduler/) | 企业级定时任务调度器 (Cron) |
-| Go | [docker-deploy](go/docker-deploy/) | 多阶段 Docker 构建 + 容器化部署 |
-| Go | [object-storage](go/object-storage/) | MinIO/S3 兼容对象存储客户端 |
-| Go | [micro-gateway](go/micro-gateway/) | 微服务 API 网关 (反向代理+负载均衡) |
-| Go | [file-sync](go/file-sync/) | rsync 风格文件增量同步工具 |
-| Go | [config-center](go/config-center/) | 配置中心 (热加载+多格式+订阅) |
-| Go | [distributed-tracing](go/distributed-tracing/) | OpenTelemetry 分布式链路追踪 |
+## PYTHON (9项目)
+- [api-test-framework](python/api-test-framework)
+- [async-spider](python/async-spider)
+- [backtrader-strategy](python/backtrader-strategy)
+- [etl-pipeline](python/etl-pipeline)
+- [flask-rest-api](python/flask-rest-api)
+- [markdown-editor](python/markdown-editor)
+- [news-crawler](python/news-crawler)
+- [order-microservice](python/order-microservice)
+- [sales-analytics](python/sales-analytics)
+
+## GO (10项目)
+- [config-center](go/config-center)
+- [cron-scheduler](go/cron-scheduler)
+- [distributed-tracing](go/distributed-tracing)
+- [docker-deploy](go/docker-deploy)
+- [file-sync](go/file-sync)
+- [micro-gateway](go/micro-gateway)
+- [object-storage](go/object-storage)
+- [renamer](go/renamer)
+- [restful-api](go/restful-api)
+- [websocket-chat](go/websocket-chat)
+
+## VUE (10项目)
+- [admin-dashboard](vue/admin-dashboard)
+- [component-library](vue/component-library)
+- [data-dashboard](vue/data-dashboard)
+- [ecommerce](vue/ecommerce)
+- [i18n-demo](vue/i18n-demo)
+- [map-demo](vue/map-demo)
+- [mobile-app](vue/mobile-app)
+- [permission-demo](vue/permission-demo)
+- [pwa-demo](vue/pwa-demo)
+- [rich-editor](vue/rich-editor)
+
+## AI (17项目)
+- [agent-workflow](ai/agent-workflow)
+- [anomaly-detection](ai/anomaly-detection)
+- [anomaly-detector](ai/anomaly-detector)
+- [code-review](ai/code-review)
+- [code-review-bot](ai/code-review-bot)
+- [customer-service](ai/customer-service)
+- [doc-summarization](ai/doc-summarization)
+- [doc-summarizer](ai/doc-summarizer)
+- [image-classifier](ai/image-classifier)
+- [image-recognition](ai/image-recognition)
+- [rag-demo](ai/rag-demo)
+- [rag-system](ai/rag-system)
+- [recommendation-engine](ai/recommendation-engine)
+- [recommendation-system](ai/recommendation-system)
+- [video-analyzer](ai/video-analyzer)
+- [video-understanding](ai/video-understanding)
+- [voice-assistant](ai/voice-assistant)
+
+## TYPESCRIPT (9项目)
+- [api-client-sdk](typescript/api-client-sdk)
+- [cli-tool](typescript/cli-tool)
+- [config-validator](typescript/config-validator)
+- [decorator-framework](typescript/decorator-framework)
+- [eslint-plugin](typescript/eslint-plugin)
+- [express-server](typescript/express-server)
+- [react-fullstack](typescript/react-fullstack)
+- [type-safety](typescript/type-safety)
+- [type-utils](typescript/type-utils)
+
+## NODEJS (10项目)
+- [email-service](nodejs/email-service)
+- [file-server](nodejs/file-server)
+- [fullstack-blog](nodejs/fullstack-blog)
+- [graphql-server](nodejs/graphql-server)
+- [payment-service](nodejs/payment-service)
+- [rate-limiter](nodejs/rate-limiter)
+- [realtime-collab](nodejs/realtime-collab)
+- [static-generator](nodejs/static-generator)
+- [task-queue](nodejs/task-queue)
+- [web-crawler](nodejs/web-crawler)
+
+## RUST (11项目)
+- [cli-tool](rust/cli-tool)
+- [crypto-utils](rust/crypto-utils)
+- [db-client](rust/db-client)
+- [fullstack-app](rust/fullstack-app)
+- [hot-reload](rust/hot-reload)
+- [log-system](rust/log-system)
+- [net-proxy](rust/net-proxy)
+- [serde-lab](rust/serde-lab)
+- [tui-app](rust/tui-app)
+- [wasm-frontend](rust/wasm-frontend)
+- [web-api](rust/web-api)
+
+## REACT (10项目)
+- [animation-showcase](react/animation-showcase)
+- [chart-lab](react/chart-lab)
+- [dashboard](react/dashboard)
+- [ecommerce](react/ecommerce)
+- [file-uploader](react/file-uploader)
+- [i18n-app](react/i18n-app)
+- [realtime-board](react/realtime-board)
+- [rich-editor](react/rich-editor)
+- [ssr-blog](react/ssr-blog)
+- [theme-system](react/theme-system)
+
+## DOCKER (10项目)
+- [backup-restore](docker/backup-restore)
+- [canary-deploy](docker/canary-deploy)
+- [cicd-pipeline](docker/cicd-pipeline)
+- [dev-env](docker/dev-env)
+- [local-dev](docker/local-dev)
+- [log-collector](docker/log-collector)
+- [microservices](docker/microservices)
+- [monitoring](docker/monitoring)
+- [multi-service](docker/multi-service)
+- [security-scan](docker/security-scan)
+
+## SQL (10项目)
+- [data-archive](sql/data-archive)
+- [data-migration](sql/data-migration)
+- [ecommerce-db](sql/ecommerce-db)
+- [log-analysis](sql/log-analysis)
+- [partition-table](sql/partition-table)
+- [permission-design](sql/permission-design)
+- [report-system](sql/report-system)
+- [search-optimize](sql/search-optimize)
+- [social-network](sql/social-network)
+- [user-behavior](sql/user-behavior)
+
+## GIT (10项目)
+- [auto-release](git/auto-release)
+- [branch-strategy](git/branch-strategy)
+- [ci-config](git/ci-config)
+- [code-review](git/code-review)
+- [large-file](git/large-file)
+- [monorepo](git/monorepo)
+- [release-management](git/release-management)
+- [repo-migration](git/repo-migration)
+- [submodule](git/submodule)
+- [team-workflow](git/team-workflow)
+
+## LINUX (10项目)
+- [container-orchestration](linux/container-orchestration)
+- [cron-jobs](linux/cron-jobs)
+- [disk-management](linux/disk-management)
+- [log-analysis](linux/log-analysis)
+- [network-diagnosis](linux/network-diagnosis)
+- [performance-tuning](linux/performance-tuning)
+- [security-audit](linux/security-audit)
+- [server-setup](linux/server-setup)
+- [shell-toolkit](linux/shell-toolkit)
+- [user-management](linux/user-management)
+
+## 3D (10项目)
+- [batch-renderer](3d/batch-renderer)
+- [character-animation](3d/character-animation)
+- [light-baking](3d/light-baking)
+- [model-loader](3d/model-loader)
+- [particle-effects](3d/particle-effects)
+- [physics-sim](3d/physics-sim)
+- [product-viewer](3d/product-viewer)
+- [room-planner](3d/room-planner)
+- [shader-effects](3d/shader-effects)
+- [terrain-generator](3d/terrain-generator)
+
 
 📚 完整课程: https://knowledge.sumutong.com
