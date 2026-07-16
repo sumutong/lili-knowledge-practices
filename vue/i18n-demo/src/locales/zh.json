@@ -1,0 +1,7 @@
+{
+  "app": { "title": "国际化实战", "subtitle": "Vue I18n 多语言切换" },
+  "nav": { "home": "首页", "about": "关于", "products": "产品" },
+  "home": { "welcome": "欢迎来到我们的平台", "description": "这是一个 Vue3 + vue-i18n 国际化实战项目，支持中英文切换。" },
+  "product": { "title": "产品列表", "addToCart": "加入购物车" },
+  "footer": { "copyright": "© 2024 版权所有" }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立里 WASM 计算器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui; background: #0f172a; color: #e2e8f0; 
+               display: flex; justify-content: center; padding: 2rem; }
+        .container { max-width: 500px; width: 100%; }
+        h1 { text-align: center; color: #38bdf8; margin-bottom: 1.5rem; }
+        .calc { background: #1e293b; border-radius: 12px; padding: 1.5rem; }
+        .display { background: #0f172a; padding: 1rem; border-radius: 8px;
+                   text-align: right; font-size: 1.5rem; margin-bottom: 1rem;
+                   min-height: 60px; word-break: break-all; }
+        .buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        button { padding: 1rem; font-size: 1.2rem; border: none; border-radius: 8px;
+                 cursor: pointer; background: #334155; color: #e2e8f0; }
+        button:hover { background: #475569; }
+        button.op { background: #1d4ed8; }
+        button.op:hover { background: #2563eb; }
+        button.eq { background: #059669; }
+        button.eq:hover { background: #10b981; }
+        button.clr { background: #dc2626; }
+        button.clr:hover { background: #ef4444; }
+        .section { margin-top: 2rem; background: #1e293b; padding: 1.5rem; border-radius: 12px; }
+        .section h2 { color: #38bdf8; margin-bottom: 1rem; }
+        input { width: 100%; padding: 0.75rem; border-radius: 8px; border: none;
+                background: #0f172a; color: #e2e8f0; font-size: 1rem; }
+        .result { margin-top: 0.5rem; color: #34d399; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🦀 Rust WASM 演示</h1>
+
+    <div class="calc">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button onclick="press('7')">7</button>
+            <button onclick="press('8')">8</button>
+            <button onclick="press('9')">9</button>
+            <button class="op" onclick="press('/')">/</button>
+            <button onclick="press('4')">4</button>
+            <button onclick="press('5')">5</button>
+            <button onclick="press('6')">6</button>
+            <button class="op" onclick="press('*')">*</button>
+            <button onclick="press('1')">1</button>
+            <button onclick="press('2')">2</button>
+            <button onclick="press('3')">3</button>
+            <button class="op" onclick="press('-')">-</button>
+            <button onclick="press('0')">0</button>
+            <button onclick="press('.')">.</button>
+            <button class="eq" onclick="compute()">=</button>
+            <button class="op" onclick="press('+')">+</button>
+            <button class="clr" onclick="clearDisplay()" style="grid-column: span 4;">清除</button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>斐波那契</h2>
+        <input type="number" id="fib-input" placeholder="输入 n" value="10">
+        <button onclick="computeFib()" style="margin-top: 0.5rem;">计算</button>
+        <div class="result" id="fib-result"></div>
+    </div>
+
+    <div class="section">
+        <h2>字符串翻转</h2>
+        <input type="text" id="str-input" placeholder="输入文本">
+        <button onclick="reverseStr()" style="margin-top: 0.5rem;">翻转</button>
+        <div class="result" id="str-result"></div>
+    </div>
+</div>
+
+<script type="module">
+    import init, { calculate, fibonacci, reverse_string } from './pkg/wasm_frontend.js';
+
+    async function run() {
+        await init();
+        window.wasmReady = true;
+    }
+    run();
+</script>
+
+<script>
+    let current = '';
+    let operator = '';
+    let prev = '';
+
+    window.press = function(val) {
+        if ('+-*/'.includes(val)) {
+            if (current) {
+                prev = current;
+                current = '';
+                operator = val;
+            }
+        } else {
+            current += val;
+        }
+        document.getElementById('display').textContent = current || prev || '0';
+    };
+
+    window.compute = function() {
+        if (window.wasmReady && prev && current && operator) {
+            const result = calculate(parseFloat(prev), parseFloat(current), operator);
+            document.getElementById('display').textContent = result;
+            current = String(result);
+            prev = '';
+            operator = '';
+        }
+    };
+
+    window.clearDisplay = function() {
+        current = '';
+        prev = '';
+        operator = '';
+        document.getElementById('display').textContent = '0';
+    };
+
+    window.computeFib = function() {
+        const n = parseInt(document.getElementById('fib-input').value) || 0;
+        if (window.wasmReady) {
+            const result = fibonacci(n);
+            document.getElementById('fib-result').textContent = `F(${n}) = ${result}`;
+        }
+    };
+
+    window.reverseStr = function() {
+        const s = document.getElementById('str-input').value;
+        if (window.wasmReady) {
+            const result = reverse_string(s);
+            document.getElementById('str-result').textContent = result;
+        }
+    };
+</script>
+</body>
+</html>

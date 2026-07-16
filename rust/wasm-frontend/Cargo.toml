@@ -1,0 +1,12 @@
+[package]
+name = "wasm-frontend"
+version = "0.1.0"
+edition = "2024"
+description = "Rust WASM实战 — WebAssembly前端计算器与图像处理"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+js-sys = "0.3"

@@ -1,0 +1,13 @@
+[package]
+name = "crypto-utils"
+version = "0.1.0"
+edition = "2024"
+description = "Rust 加密实战 — AES加密、RSA签名、哈希摘要、Base64编解码"
+
+[dependencies]
+aes-gcm = "0.10"
+base64 = "0.22"
+sha2 = "0.10"
+rand = "0.8"
+hex = "0.4"
+clap = { version = "4", features = ["derive"] }

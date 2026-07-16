@@ -1,0 +1,12 @@
+[package]
+name = "cli-tool"
+version = "0.1.0"
+edition = "2024"
+description = "Rust CLI工具实战 — 基于clap的命令行工具，支持文件搜索、统计与批量处理"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+walkdir = "2"
+regex = "1"
+colored = "3"
+indicatif = "0.17"

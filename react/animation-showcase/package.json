@@ -1,0 +1,13 @@
+{
+  "name": "animation-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React动画实战 — CSS动画、Framer Motion过渡与手势",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1",
+    "framer-motion": "^12.15.0"
+  },
+  "scripts": { "start": "react-scripts start", "build": "react-scripts build" }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "theme-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React主题系统实战 — 动态主题切换与CSS变量",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "app": { "title": "i18n Practice", "subtitle": "Vue I18n Multi-language Switching" },
+  "nav": { "home": "Home", "about": "About", "products": "Products" },
+  "home": { "welcome": "Welcome to our platform", "description": "This is a Vue3 + vue-i18n internationalization practice project supporting Chinese and English switching." },
+  "product": { "title": "Product List", "addToCart": "Add to Cart" },
+  "footer": { "copyright": "© 2024 All Rights Reserved" }
+}

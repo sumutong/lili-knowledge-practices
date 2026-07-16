@@ -1,0 +1,17 @@
+[package]
+name = "fullstack-app"
+version = "0.1.0"
+edition = "2024"
+description = "Rust 全栈实战项目 — Actix-web + SQLite + 模板渲染的博客系统"
+
+[dependencies]
+actix-web = "4"
+actix-rt = "2"
+actix-files = "0.6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+tokio = { version = "1", features = ["full"] }
+tera = "1"
