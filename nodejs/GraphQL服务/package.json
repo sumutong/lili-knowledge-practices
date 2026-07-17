@@ -1,0 +1,18 @@
+{
+  "name": "graphql\u670d\u52a1",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "node --check src/main.js"
+  },
+  "dependencies": {
+    "@apollo": "*",
+    "@graphql-tools": "*",
+    "ws": "*",
+    "graphql-ws": "*",
+    "http": "*",
+    "express": "*",
+    "cors": "*",
+    "@prisma": "*"
+  }
+}
