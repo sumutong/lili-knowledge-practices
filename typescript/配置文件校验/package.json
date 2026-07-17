@@ -1,0 +1,13 @@
+{
+  "name": "\u914d\u7f6e\u6587\u4ef6\u6821\u9a8c",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.6"
+  },
+  "dependencies": {
+    "zod": "^3"
+  }
+}
