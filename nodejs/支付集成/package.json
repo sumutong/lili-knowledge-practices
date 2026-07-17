@@ -1,0 +1,11 @@
+{
+  "name": "\u652f\u4ed8\u96c6\u6210",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "node --check src/main.js"
+  },
+  "dependencies": {
+    "stripe": "*"
+  }
+}
