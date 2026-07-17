@@ -1,0 +1,9 @@
+{
+  "name": "ratelimiter",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "node --check src/main.js"
+  },
+  "dependencies": {}
+}
