@@ -1,0 +1,12 @@
+{
+  "name": "\u4efb\u52a1\u961f\u5217",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "node --check src/main.js"
+  },
+  "dependencies": {
+    "bullmq": "*",
+    "ioredis": "*"
+  }
+}
