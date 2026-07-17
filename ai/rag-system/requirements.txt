@@ -1,0 +1,8 @@
+langchain
+openai
+chromadb
+faiss-cpu
+sentence-transformers
+tiktoken
+fastapi
+uvicorn
