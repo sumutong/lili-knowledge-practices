@@ -1,0 +1,7 @@
+openai
+langchain
+chromadb
+fastapi
+uvicorn
+pydantic
+requests
