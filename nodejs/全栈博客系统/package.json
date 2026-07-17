@@ -1,0 +1,21 @@
+{
+  "name": "\u5168\u6808\u535a\u5ba2\u7cfb\u7edf",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "node --check src/main.js"
+  },
+  "dependencies": {
+    "dotenv": "*",
+    "express": "*",
+    "mongoose": "*",
+    "express-session": "*",
+    "connect-mongo": "*",
+    "connect-flash": "*",
+    "method-override": "*",
+    "path": "*",
+    "marked": "*",
+    "http-errors": "*",
+    "moment": "*"
+  }
+}
