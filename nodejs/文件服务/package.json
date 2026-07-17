@@ -1,0 +1,15 @@
+{
+  "name": "\u6587\u4ef6\u670d\u52a1",
+  "private": true,
+  "scripts": {
+    "start": "node src/main.js",
+    "check": "node --check src/main.js"
+  },
+  "dependencies": {
+    "dotenv": "*",
+    "express": "*",
+    "cors": "*",
+    "helmet": "*",
+    "morgan": "*"
+  }
+}
